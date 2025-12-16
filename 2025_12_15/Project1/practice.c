@@ -53,16 +53,16 @@
 ////2
 //int main()
 //{
-//	printf("输入一个字符：\n");
-//	int n = 0;
-//	scanf("%d", &n);  //易错点：这里用%d
-//	printf("这个字符是：%c",n); //这里显示的是字符
+//        printf("输入一个字符：\n");
+//        int n = 0;
+//        scanf("%d", &n);  //易错点：这里用%d
+//        printf("这个字符是：%c",n); //这里显示的是字符
 //
-//	printf("输入一个字符：\n");
-//	char n2 = 0;
-//	scanf(" %c", &n2); //注意这里要加空格清除缓存区残留
-//	printf("这个字符是：%d", n);  //这里显示的是ASCII码值 
-//	return 0;
+//        printf("输入一个字符：\n");
+//        char n2 = 0;
+//        scanf(" %c", &n2); //注意这里要加空格清除缓存区残留
+//        printf("这个字符是：%d", n);  //这里显示的是ASCII码值 
+//        return 0;
 //}编译通过
 //重点问题设计缓存区残留这个知识点我没见过，问了AI有三种解决方法
 //用while (getchar() != '\n');  // 关键代码！清楚缓存区
@@ -73,15 +73,15 @@
 ////3
 int main()
 {
-	printf("\a");
-	printf("Startled by the sudden sound, Sally shouted,\n");
-	printf("\"By the Great Pumpkin, what was that!\"");  //转义字符的使用
-	return 0;
+    printf("\a");
+    printf("Startled by the sudden sound, Sally shouted,\n");
+    printf("\"By the Great Pumpkin, what was that!\"");  //转义字符的使用
+    return 0;
 }//编译通过
 
 ////4
 //int main()
 //{
 //
-//	return 0;
+//        return 0;
 //}
