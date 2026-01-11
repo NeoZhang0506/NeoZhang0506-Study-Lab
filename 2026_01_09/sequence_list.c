@@ -67,6 +67,46 @@ void SeqListPushFront(Seqlist* ps, int e)
 	ps->size;
 }
 
+void SeqListPopFront(Seqlist* ps)
+{
+	ps->size--;
+}
+
+void SeqListPopBack(Seqlist* ps)
+{
+	for (int i = 0; i < ps->size - 1; i++)
+	{
+		ps->data[i] = ps->data[i+1];
+	}
+	ps->size--;
+}
+
+void SeqListInsert(Seqlist* ps, int pos, int x)
+{
+	if (ps->capacity <= ps->size)
+	{
+		int new_capacity = ps->capacity == 0 ? 4 : 2 * ps->capacity;
+		int* tmp = (int*)realloc(ps->data, new_capacity * sizeof(int));
+		ps->data = tmp;
+		ps->capacity = new_capacity;
+	}
+	for(int i = pos - 1; i < ps->size; i++)
+	{
+		ps->data[i+1] = ps->data[i];
+	}
+	ps->data[pos-1] = x;
+	ps->size++;
+}
+
+void SeqListErase(Seqlist* ps, int pos)
+{
+	for (int i = pos - 1; i < ps->size; i++)
+	{
+		ps->data[i] = ps->data[i+1];
+	}
+	ps->size;
+}
+
 void test1();
 int main()
 {
